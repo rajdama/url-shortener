@@ -6,7 +6,7 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault() 
     let a = input.value
     input.value = null
-    let theurl = `http://localhost/myurl?url=${a}`
+    let theurl = `/myurl?url=${a}`
     fetch(theurl).then((response)=>{
         response.json().then((data)=>{
             if(data.error){

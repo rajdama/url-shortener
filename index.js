@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const shortUrl = require('node-url-shortener');
-let port = 80;
+let port = process.env.PORT || 80;
 
 //EXPRESS RELATED STUFF
 app.use('/static', express.static('static'));//Serving the static files
